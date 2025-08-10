@@ -1,4 +1,4 @@
-function validateInput(event) {
+document.getElementById("login-form").addEventListener("submit", (event) => {
     // Prevents the form from resetting when when the submit button is clicked
     event.preventDefault(); 
     
@@ -15,5 +15,4 @@ function validateInput(event) {
 
     // Resets the login form
     document.getElementById("login-form").reset();
-
-}
+})
