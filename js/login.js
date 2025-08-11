@@ -12,4 +12,7 @@ document.getElementById("login-form").addEventListener("submit", (event) => {
         window.location.href = "./banking.html";
     else
         return alert("Wrong credentials");
+
+    // Resets the form to its original state
+    document.getElementById('login-form').reset();
 })
