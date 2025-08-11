@@ -9,10 +9,7 @@ document.getElementById("login-form").addEventListener("submit", (event) => {
     // Redirects to the banking page if the credentials are correct
     // Otherwise it shows an error message
     if (email === "admin@domain.com" && password === "banking")
-        window.location.href = "../banking.html";
+        window.location.href = "./banking.html";
     else
         return alert("Wrong credentials");
-
-    // Resets the login form
-    document.getElementById("login-form").reset();
 })
