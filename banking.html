@@ -24,31 +24,31 @@
         <title>My Bank - Banking</title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
-    <body class="min-h-screen">
-        <div class="grid grid-cols-3">
-            <div>
+    <body class="bg-slate-100 min-h-screen p-5 flex justify-center flex-col items-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="bg-green-500/80 text-white p-4 md:p-6 lg:p-8 text-3xl lg:text-4xl font-bold rounded-2xl flex flex-col justify-center items-center shadow-lg shadow-green-200">
                 <h3>Deposited</h3>
-                <p>$ <span id="display-total-deposit">0</span></p>
+                <p>$ <span id="display-total-deposit">0.00</span></p>
             </div>
-            <div>
+            <div class="bg-yellow-500/80 text-white p-4 md:p-6 lg:p-8 text-3xl lg:text-4xl font-bold rounded-2xl flex flex-col justify-center items-center shadow-lg shadow-yellow-200">
                 <h3>Balance</h3>
-                <p>$ <span id="display-balance">0</span></p>
+                <p>$ <span id="display-balance">0.00</span></p>
             </div>
-            <div>
+            <div class="bg-red-500/80 text-white p-4 md:p-6 lg:p-8 text-3xl lg:text-4xl font-bold rounded-2xl flex flex-col justify-center items-center shadow-xl shadow-red-200">
                 <h3>Withdrawn</h3>
-                <p>$ <span id="display-total-withdraw">0</span></p>
+                <p>$ <span id="display-total-withdraw">0.00</span></p>
             </div>
         </div>
 
-        <div class="grid grid-cols-2">
-            <div>
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 pt-10">
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-200">
                 <h3>Deposit</h3>
-                <input type="number" id="deposit-input" placeholder="Enter amount to deposit"> <br>
-                <button id="deposit-button" class="cursor-pointer">Deposit</button>
+                <input type="number" id="deposit-input" placeholder="Deposit amount"> <br> 
+                <button id="deposit-button" class="cursor-pointer">Deposit</button> 
             </div>
-            <div>
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-200">
                 <h3>Withdraw</h3>
-                <input type="number" id="withdraw-input" placeholder="Enter amount to withdraw"> <br>
+                <input type="number" id="withdraw-input" placeholder="Withdraw amount"> <br>
                 <button id="withdraw-button" class="cursor-pointer">Withdraw</button>
             </div>
         </div>

@@ -6,10 +6,20 @@ document.getElementById("deposit-button").addEventListener("click", () => {
         document.getElementById("deposit-input").value = '';
         return alert("You need to deposit at least $1");
     } else {
-        const totalDeposit = parseFloat(document.getElementById("display-total-deposit").innerText);
+        const totalDeposit = parseFloat(document.getElementById("display-total-deposit").innerText);         
 
-        document.getElementById("display-total-deposit").innerText = totalDeposit + depositedAmount;
-        document.getElementById("display-balance").innerText = currentBalance + depositedAmount;
+        const newTotalDeposit = totalDeposit + depositedAmount;
+        const newBalance = currentBalance + depositedAmount;
+
+        console.log(newTotalDeposit); 
+        console.log(newBalance);
+
+        document.getElementById("display-total-deposit").innerText = newTotalDeposit.toFixed(2);
+        document.getElementById("display-balance").innerText = newBalance.toFixed(2);
+
+        console.log(newTotalDeposit.toFixed(2)); 
+        console.log(newBalance.toFixed(2));
+
         document.getElementById("deposit-input").value = '';
     }
 });
@@ -19,15 +29,25 @@ document.getElementById("withdraw-button").addEventListener("click", () => {
     const currentBalance = parseFloat(document.getElementById("display-balance").innerText);
 
     if (withdrawnAmount <= 0)  {
-        document.getElementById("deposit-input").value = '';
+        document.getElementById("withdraw-input").value = '';
         return alert("You need to withdraw at least $1");
     } else if (withdrawnAmount > currentBalance)
         return alert("The amount you want to withdraw exceedes your balance")
     else {
         const totalWithdraw = parseFloat(document.getElementById("display-total-withdraw").innerText);
 
-        document.getElementById("display-total-withdraw").innerText = totalWithdraw + withdrawnAmount;
-        document.getElementById("display-balance").innerText = currentBalance - withdrawnAmount;
+        const newTotalWithdraw = totalWithdraw + withdrawnAmount; 
+        const newBalance = currentBalance - withdrawnAmount;
+
+        console.log(newTotalWithdraw); 
+        console.log(newBalance);
+
+        document.getElementById("display-total-withdraw").innerText = newTotalWithdraw.toFixed(2);
+        document.getElementById("display-balance").innerText = newBalance.toFixed(2);
+
+        console.log(newTotalWithdraw.toFixed(2)); 
+        console.log(newBalance.toFixed(2));
+
         document.getElementById("withdraw-input").value = '';
     }
 });
