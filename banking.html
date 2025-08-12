@@ -28,7 +28,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div class="bg-green-500/50 backdrop-blur-lg text-white p-4 md:p-6 lg:p-8 text-3xl lg:text-4xl font-bold rounded-2xl flex flex-col justify-center items-center shadow-lg shadow-green-200">
                 <h3>Deposited</h3>
-                <p>$ <span id="display-total-deposit">0.00</span></p>
+                <p>$ <span class="mt-4" id="display-total-deposit">0.00</span></p>
             </div>
             <div class="bg-yellow-500/50 backdrop-blur-lg text-white p-4 md:p-6 lg:p-8 text-3xl lg:text-4xl font-bold rounded-2xl flex flex-col justify-center items-center shadow-lg shadow-yellow-200">
                 <h3>Balance</h3>
@@ -42,14 +42,14 @@
 
         <div class="grid grid-cols-1 gap-5 md:grid-cols-2 pt-10">
             <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-200">
-                <h3>Deposit</h3>
-                <input type="number" id="deposit-input" placeholder="Deposit amount"> <br> 
-                <button id="deposit-button" class="cursor-pointer">Deposit</button> 
+                <h3 class="text-2xl font-bold mb-2">Deposit</h3>
+                <input type="number" class="w-full border-2 border-slate-300 rounded-lg p-2 mb-4" id="deposit-input" placeholder="Deposit amount"> <br> 
+                <button id="deposit-button" class="cursor-pointer w-full py-2 bg-blue-500 text-white font-semibold rounded-lg">Deposit</button> 
             </div>
             <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-200">
-                <h3>Withdraw</h3>
-                <input type="number" id="withdraw-input" placeholder="Withdraw amount"> <br>
-                <button id="withdraw-button" class="cursor-pointer">Withdraw</button>
+                <h3 class="text-2xl font-bold mb-2">Withdraw</h3>
+                <input type="number" class="w-full border-2 border-slate-300 rounded-lg p-2 mb-4" id="withdraw-input" placeholder="Withdraw amount"> <br>
+                <button id="withdraw-button" class="cursor-pointer w-full py-2 bg-red-500 text-white font-semibold rounded-lg">Withdraw</button>
             </div>
         </div>
 
