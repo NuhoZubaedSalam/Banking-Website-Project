@@ -21,11 +21,37 @@
             href="./img/favicon_banking/favicon-16x16.png"
         />
         <link rel="manifest" href="./img/favicon_banking/site.webmanifest" />
-        <title>My Online Bank - Banking</title>
+        <title>My Bank - Banking</title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
-    <body>
-        <h1>Hello</h1>
+    <body class="min-h-screen">
+        <div class="grid grid-cols-3">
+            <div>
+                <h3>Deposited</h3>
+                <p>$ <span id="display-total-deposit">0</span></p>
+            </div>
+            <div>
+                <h3>Balance</h3>
+                <p>$ <span id="display-balance">0</span></p>
+            </div>
+            <div>
+                <h3>Withdrawn</h3>
+                <p>$ <span id="display-total-withdraw">0</span></p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2">
+            <div>
+                <h3>Deposit</h3>
+                <input type="number" id="deposit-input" placeholder="Enter amount to deposit"> <br>
+                <button id="deposit-button" class="cursor-pointer">Deposit</button>
+            </div>
+            <div>
+                <h3>Withdraw</h3>
+                <input type="number" id="withdraw-input" placeholder="Enter amount to withdraw"> <br>
+                <button id="withdraw-button" class="cursor-pointer">Withdraw</button>
+            </div>
+        </div>
 
         <script src="./js/banking.js"></script>
     </body>
